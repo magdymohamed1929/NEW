@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic Portfolio Design System - Cyberpunk Aesthetic
+All colors MUST be HSL for consistency.
+*/
+
+@layer base {
+  :root {
+    /* Natural Dark Background */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    /* Refined Primary - Subtle Blue */
+    --primary: 220 20% 65%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 25% 70%;
+
+    /* Elegant Secondary - Soft Purple */
+    --secondary: 260 15% 60%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-glow: 260 20% 65%;
+
+    /* Sophisticated Accent - Warm Gray */
+    --accent: 200 10% 70%;
+    --accent-foreground: 0 0% 15%;
+    --accent-glow: 200 15% 75%;
+
+    /* Natural Cards */
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 90%;
+    --card-border: 0 0% 25%;
+
+    /* Subtle Holographic */
+    --holographic: 220 15% 60%;
+    --holographic-secondary: 260 12% 65%;
+
+    /* Refined Grid */
+    --grid: 0 0% 20%;
+    --grid-glow: 220 15% 50%;
+
+    /* Natural Interactive States */
+    --hover: 220 25% 70%;
+    --active: 260 20% 65%;
+
+    /* Elegant Glass */
+    --glass-bg: 0 0% 15%;
+    --glass-border: 0 0% 30%;
+
+    /* Muted Elements */
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Clean Borders */
+    --border: 0 0% 25%;
+    --input: 0 0% 12%;
+    --ring: 220 20% 65%;
+
+    /* Border Radius */
+    --radius: 0.75rem;
+
+    /* Animation Easing */
+    --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Natural Particles */
+    --particle-cyan: 220 25% 70%;
+    --particle-purple: 260 20% 65%;
+    --particle-magenta: 200 15% 70%;
+  }
+
+  /* Light Mode */
+  .light {
+    /* Clean Light Background */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+
+    /* Refined Primary - Light Mode */
+    --primary: 220 30% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 35% 50%;
+
+    /* Elegant Secondary - Light Mode */
+    --secondary: 260 25% 50%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-glow: 260 30% 55%;
+
+    /* Sophisticated Accent - Light Mode */
+    --accent: 200 20% 50%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 200 25% 55%;
+
+    /* Light Cards */
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 15%;
+    --card-border: 0 0% 85%;
+
+    /* Subtle Holographic - Light */
+    --holographic: 220 20% 60%;
+    --holographic-secondary: 260 18% 65%;
+
+    /* Clean Grid - Light */
+    --grid: 0 0% 88%;
+    --grid-glow: 220 20% 70%;
+
+    /* Natural Interactive - Light */
+    --hover: 220 35% 50%;
+    --active: 260 25% 55%;
+
+    /* Clean Glass - Light */
+    --glass-bg: 0 0% 100%;
+    --glass-border: 0 0% 80%;
+
+    /* Light Muted */
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Clean Borders - Light */
+    --border: 0 0% 85%;
+    --input: 0 0% 96%;
+    --ring: 220 30% 45%;
+
+    /* Natural Particles - Light */
+    --particle-cyan: 220 30% 60%;
+    --particle-purple: 260 25% 65%;
+    --particle-magenta: 200 20% 70%;
+  }
+
+  /* Typography Scale */
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-arabic {
+    font-family: 'Cairo', 'Inter', sans-serif;
+  }
+
+  /* Subtle Glow Effects */
+  .glow-cyan {
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.3), 0 0 30px hsl(var(--primary) / 0.2), 0 0 60px hsl(var(--primary) / 0.1);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 15px hsl(var(--secondary) / 0.3), 0 0 30px hsl(var(--secondary) / 0.2), 0 0 60px hsl(var(--secondary) / 0.1);
+  }
+
+  .glow-magenta {
+    box-shadow: 0 0 15px hsl(var(--accent) / 0.3), 0 0 30px hsl(var(--accent) / 0.2), 0 0 60px hsl(var(--accent) / 0.1);
+  }
+
+  /* Glassmorphism Effect */
+  .glass {
+    background: hsl(var(--glass-bg) / 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border) / 0.2);
+  }
+
+  /* Subtle Holographic Gradient */
+  .holographic {
+    background: linear-gradient(45deg, 
+      hsl(var(--primary) / 0.15) 0%, 
+      hsl(var(--secondary) / 0.15) 25%, 
+      hsl(var(--accent) / 0.15) 50%, 
+      hsl(var(--secondary) / 0.15) 75%, 
+      hsl(var(--primary) / 0.15) 100%);
+    background-size: 400% 400%;
+    animation: holographic-shift 4s ease-in-out infinite;
+  }
+
+  /* Tech Grid Pattern */
+  .tech-grid {
+    background-image: 
+      linear-gradient(hsl(var(--grid) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  /* Particle Animation */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-float 4s linear infinite;
+  }
+
+  /* Premium Scroll */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  /* Section Snap */
+  .snap-section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes particle-float {
+  0% { 
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-100px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 80px hsl(var(--primary) / 0.3);
+  }
+}
+
+@keyframes rocket-launch {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  html[dir="rtl"] body {
+    font-family: 'Cairo', 'Inter', sans-serif;
+  }
+  /* Reset letter-spacing for Arabic (RTL) to preserve natural cursive joining */
+  html[dir="rtl"] .tracking-tighter,
+  html[dir="rtl"] .tracking-tight,
+  html[dir="rtl"] .tracking-normal,
+  html[dir="rtl"] .tracking-wide,
+  html[dir="rtl"] .tracking-wider,
+  html[dir="rtl"] .tracking-widest {
+    letter-spacing: normal !important;
+  }
+}
